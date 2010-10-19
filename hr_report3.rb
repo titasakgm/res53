@@ -59,6 +59,8 @@ res.each do |rec|
   totg = rec[9].to_i
   totp = rec[10].to_i
   
+  amp += " (สสจ.)" if ac == '00'
+  amp += " (สสอ.)" if ac == '01'
   ttx += tt
   gox += go
   pvx += pv
