@@ -1,0 +1,65 @@
+<html>
+<head>
+<script type="text/javascript" src="js/ListBox.js"></script>
+<script type="text/javascript">
+    var oListBox;
+    var yearSel = new Array();
+    window.onload = function()
+    {        
+        var Arguments = {
+            Base: document.getElementById('base'),
+            Rows: 3,
+            Width: 300,
+            NormalItemColor: null,
+            NormalItemBackColor: null,
+            AlternateItemColor: null,
+            AlternateItemBackColor: null,
+            SelectedItemColor: null,
+            SelectedIItemBackColor: null,
+            HoverItemColor: null,
+            HoverItemBackColor: null,
+            HoverBorderdColor: null,
+            ClickEventHandler: OnClick
+        };
+        
+        oListBox = new ListBox(Arguments); 
+
+        oListBox.AddItem('CodeProject.com','http://www.codeproject.com');
+        oListBox.AddItem('yahoo.com','http://www.yahoo.com/');
+        oListBox.AddItem('microsoft.com','http://www.microsoft.com/en/us/default.aspx');
+        oListBox.AddItem('asp.net','http://www.asp.net');
+        oListBox.AddItem('cricinfo.com','http://www.cricinfo.com/');
+        oListBox.AddItem('AOL','http://www.aol.com/');
+        oListBox.AddItem('STPL','http://stpl.biz');
+    }
+    var OnClick = function(Sender, EventArgs)
+    {
+        var Message = new Array();
+
+        Message.push('IsSelected: ' + Sender.checked.toString());
+        Message.push('Text: ' + EventArgs.Text);
+        Message.push('Value: ' + EventArgs.Value);
+        Message.push('Index: ' + EventArgs.ItemIndex);
+
+        document.getElementById('DivMessage').innerHTML = Message.join('<br />');
+    }
+
+    window.onunload = function()
+    {
+        oListBox.Dispose();
+    }
+function showItems()
+{
+  var sel = oListBox.GetItems();
+  alert("sel[0]:" + sel[0].IsSelected);
+  alert("sel[1]:" + sel[1].IsSelected);
+}
+</script>
+</head>
+<body>
+<div id="base"></div>
+<div id="DivMessage"></div>
+<input type='button' value='OK' onclick='showItems()' />
+</body>
+</html>
+

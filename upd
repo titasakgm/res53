@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp /home/titasak/RES52-UTF-8/* ./
+chmod +x *.rb
+

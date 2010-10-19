@@ -1,0 +1,60 @@
+<html>
+<head>
+<script type="text/javascript" src="js/ListBox.js"></script>
+<script type="text/javascript">
+var oListBox;
+window.onload = function()
+{        
+  var Arguments = {
+    Base: document.getElementById('base'),
+    Rows: 3,
+    Width: 100,
+    NormalItemColor: null,
+    NormalItemBackColor: null,
+    AlternateItemColor: null,
+    AlternateItemBackColor: null,
+    SelectedItemColor: null,
+    SelectedIItemBackColor: null,
+    HoverItemColor: null,
+    HoverItemBackColor: null,
+    HoverBorderdColor: null,
+    ClickEventHandler: null
+  };
+        
+  oListBox = new ListBox(Arguments); 
+  oListBox.AddItem('2544','2544');
+  oListBox.AddItem('2545','2545');
+  oListBox.AddItem('2546','2546');
+  oListBox.AddItem('2547','2547');
+  oListBox.AddItem('2548','2548');
+  oListBox.AddItem('2549','2549');
+  oListBox.AddItem('2550','2550');
+  oListBox.AddItem('2551','2551');
+}
+
+window.onunload = function()
+{
+  oListBox.Dispose();
+}
+
+function showItems()
+{
+  var sel = oListBox.GetItems();
+  var s = new Array;
+  for(var i=0;i<sel.length;i++)
+  {
+    if (sel[i].IsSelected)
+      s.push(sel[i].Value);
+  }
+  alert("year:" + s.join(','));
+}
+</script>
+</head>
+<body>
+<div id="base"></div>
+<div id="DivMessage"></div>
+<p>
+<input type='button' value='OK' onclick='showItems()' />
+</body>
+</html>
+
