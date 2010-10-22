@@ -180,10 +180,10 @@ function checkEnter(e)
 
   <div id='right'>
     <div id='adm-work'>
-    <b>ยินดีต้อนรับ คุณ#{uinfo[2]} #{uinfo[3]}</b><span id='rr'><i>วัน#{today} </i></span>
+    <b>ยินดีต้อนรับ คุณ#{uinfo[0]} #{uinfo[1]}</b><span id='rr'><i>วัน#{today} </i></span>
     <br />
-    <tt>โทรฯ: #{uinfo[4]}</tt><br />
-    <tt>Email: #{uinfo[5]}</tt>
+    <tt>โทรฯ: #{uinfo[2]}</tt><br />
+    <tt>Email: #{uinfo[3]}</tt>
       <div id='d_repstatus'></div>
       <div id='d_addmember'>
       <h4>Add New Member</h4>
