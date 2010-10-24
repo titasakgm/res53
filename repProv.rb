@@ -19,7 +19,7 @@ def getFormYearProv(fo,yr,pr)
   dst = open("/res53/zip/f#{fo}-#{yr}-#{pr}.txt","w")
   con = PGconn.connect("localhost",5432,nil,nil,"resource53","postgres")
   sql = "SELECT * FROM form#{fo} WHERE f#{fo}pcode='#{pr}' "
-  #puts "sql: #{sql}"
+  puts "sql: #{sql}"
   res = con.exec(sql)
   con.close
   res.each do |rec|
@@ -45,13 +45,13 @@ con.close
 
 res.each do |rec|
   provid = rec[0]
-  getFormYearProv('1','51',provid)
-  getFormYearProv('2','51',provid)
-  getFormYearProv('3','51',provid)
-  getFormYearProv('4','51',provid)
-  getFormYearProv('5','51',provid)
-  getFormYearProv('6','51',provid)
-  getFormYearProv('7','51',provid)
-  getFormYearProv('8','51',provid)
-  zipToFtp('51',provid)
+  getFormYearProv('1','53',provid)
+  getFormYearProv('2','53',provid)
+  getFormYearProv('3','53',provid)
+  getFormYearProv('4','53',provid)
+  getFormYearProv('5','53',provid)
+  getFormYearProv('6','53',provid)
+  getFormYearProv('7','53',provid)
+  getFormYearProv('8','53',provid)
+  zipToFtp('53',provid)
 end

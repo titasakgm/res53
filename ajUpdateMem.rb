@@ -2,6 +2,11 @@
 
 require 'cgi'
 require 'res_util.rb'
+require 'iconv'
+
+def to_utf8(s)
+  s = Iconv.iconv("UTF-8","ASCII", s)
+end
 
 c = CGI::new
 #Admin's sessid
@@ -18,7 +23,9 @@ pass = c['pass'].to_s
 off = c['off'].to_s
 pcode = c['pcode'].to_s
 fn = c['fn'].to_s
+#fn = to_utf8(fn)
 ln = c['ln'].to_s
+#ln = to_utf8(ln)
 tel = c['tel'].to_s
 eml = c['eml'].to_s
 

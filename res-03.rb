@@ -189,6 +189,7 @@ function checkEnter(e)
       <h4>Add New Member</h4>
       <hr>
       <form action="res-adm-addmember.rb" method="GET">
+      <input name="iehack" type="hidden" value="&#9760;" />
       <table border="1" width="60%">
       <tr>
         <th align="right">Username:</th>
