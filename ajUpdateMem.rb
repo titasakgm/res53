@@ -4,8 +4,8 @@ require 'cgi'
 require 'res_util.rb'
 require 'iconv'
 
-def to_utf8(s)
-  s = Iconv.iconv("UTF-8","ASCII", s)
+def utf8(s)
+ s  = Iconv.iconv("UTF-8","TIS-620", s).join
 end
 
 c = CGI::new
@@ -21,11 +21,12 @@ end
 user = c['user'].to_s
 pass = c['pass'].to_s
 off = c['off'].to_s
+#off = utf8(off)
 pcode = c['pcode'].to_s
 fn = c['fn'].to_s
-#fn = to_utf8(fn)
+#fn = utf8(fn)
 ln = c['ln'].to_s
-#ln = to_utf8(ln)
+#ln = utf8(ln)
 tel = c['tel'].to_s
 eml = c['eml'].to_s
 

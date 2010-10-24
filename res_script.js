@@ -63,7 +63,7 @@ function ajSearchMem()
     }
   }
   var req = createRequest();
-  var url = "ajSearchMem.rb?keymem=" + keymem;
+  var url = "ajSearchMem.rb?keymem=" + encodeURI(keymem);
   req.open("GET", url, true);
   req.onreadystatechange = function () {
     if (req.readyState == 4)
@@ -130,7 +130,7 @@ function ajSearchOff()
   var sessid = document.getElementById("sessid").value;
   var keyoff = document.getElementById("keyoff").value;
   var req = createRequest();
-  var url = "ajSearchOff.rb?keyoff=" + keyoff;
+  var url = "ajSearchOff.rb?keyoff=" + encodeURI(keyoff);
   req.open("GET", url, true);
   req.onreadystatechange = function () {
     if (req.readyState == 4)
@@ -235,8 +235,10 @@ function ajUpdateMem()
 
   //user = encodeURIComponent(user);
 
-  var url = "ajUpdateMem.rb?admin=" + userid + "&user=" + user + "&pass=" + pass + "&off=" + off + "&pcode=" + pcode;
-  url += "&fn=" + fn + "&ln=" + ln + "&tel=" + tel + "&eml=" + eml + "&sessid=" + sessid;
+  var url = "ajUpdateMem.rb?admin=" + userid + "&user=" + user;
+  url += "&pass=" + pass + "&off=" + encodeURI(off) + "&pcode=" + pcode;
+  url += "&fn=" + encodeURI(fn) + "&ln=" + encodeURI(ln);
+  url += "&tel=" + tel + "&eml=" + eml + "&sessid=" + sessid;
   req.open("GET", url, true);
   req.onreadystatechange = function () {
     if (req.readyState == 4)
@@ -312,10 +314,10 @@ function ajUpdateOff()
   var sel = document.getElementById("oampid2");
   var oampid2 = sel.options[sel.selectedIndex].value;
 
-  var url = "ajUpdateOff.rb?ocode=" + ocode + "&oname=" + oname;
-  url += "&oprovid=" + oprovid + "&oprovince=" + oprovince;
-  url += "&oampid=" + oampid + "&oampid2=" + oampid2 + "&oamphoe=" + oamphoe;
-  url += "&ooffice=" + ooffice + "&otype=" + otype;
+  var url = "ajUpdateOff.rb?ocode=" + ocode + "&oname=" + encodeURI(oname);
+  url += "&oprovid=" + oprovid + "&oprovince=" + encodeURI(oprovince);
+  url += "&oampid=" + oampid + "&oampid2=" + oampid2 + "&oamphoe=" + encodeURI(oamphoe);
+  url += "&ooffice=" + encodeURI(ooffice) + "&otype=" + otype;
   url += "&ominisid=" + ominisid + "&sessid=" + sessid;
   alert("ajUpdateOff: " + url);
   var req = createRequest();

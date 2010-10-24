@@ -188,8 +188,8 @@ function checkEnter(e)
       <div id='d_addmember'>
       <h4>Add New Member</h4>
       <hr>
-      <form action="res-adm-addmember.rb" method="GET">
-      <input name="iehack" type="hidden" value="&#9760;" />
+      <form action="res-adm-addmember.rb" method="GET" accept-charset="UTF-8">
+      <input name="iehack" type="hidden" value="&#255;" />
       <table border="1" width="60%">
       <tr>
         <th align="right">Username:</th>
@@ -234,6 +234,7 @@ function checkEnter(e)
     <div id='d_editmember'>
       <h4>Edit Member</h4>
       Search: <input id="keymem" type="text" name="keymem" onKeyPress='checkEnter(event)'/>
+      <input name="iehack" type="hidden" value="&#255;" />
       <input type='hidden' id='userid' name='userid' value='#{user}' />
       <input type='hidden' id='sessid' name='sessid' value='#{sessid}' />
       <input type='button' value=' OK ' onclick='ajSearchMem()' />
@@ -243,6 +244,7 @@ function checkEnter(e)
     <div id='d_editoffice'>
       <h4>Edit Office</h4>
       Search: <input id="keyoff" type="text" name="keyoff" />
+      <input name="iehack" type="hidden" value="&#255;" />
       <input type='hidden' id='userid' name='userid' value='#{user}' />
       <input type='hidden' id='sessid' name='sessid' value='#{sessid}' />
       <input type='button' value=' OK ' onclick='ajSearchOff()' />
