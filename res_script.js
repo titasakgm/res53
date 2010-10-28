@@ -238,7 +238,7 @@ function ajUpdateMem()
   var url = "ajUpdateMem.rb?admin=" + userid + "&user=" + user;
   url += "&pass=" + pass + "&off=" + encodeURI(off) + "&pcode=" + pcode;
   url += "&fn=" + encodeURI(fn) + "&ln=" + encodeURI(ln);
-  url += "&tel=" + tel + "&eml=" + eml + "&sessid=" + sessid;
+  url += "&tel=" + tel + "&eml=" + encodeURI(eml) + "&sessid=" + sessid;
   req.open("GET", url, true);
   req.onreadystatechange = function () {
     if (req.readyState == 4)
