@@ -408,6 +408,7 @@ function processReq()
           หนังสือเวียนที่ นร 1008/ ว 10  เรื่องมาตรฐานกำหนดตำแหน่ง</a>
       <li><a href='ftp://203.157.240.7/pub/resource53/survey53.zip'>Download 
           แบบฟอร์มสำรวจทรัพยากรปี 2553</a>
+      <li><a href='http://www.google.com/chrome/eula.html?hl=th&platform=win&brand=CHMB'><img src='images/chrome-download.png'></a>
      </div> <!-- eo options -->
   </div> <!-- eo right div -->
 </div> <!-- eo page div -->

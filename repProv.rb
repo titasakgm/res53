@@ -14,7 +14,6 @@ end
 
 def getFormYearProv(fo,yr,pr)
   t = Time.now
-  cYr = 51
   db = "resource53"
   dst = open("/res53/zip/f#{fo}-#{yr}-#{pr}.txt","w")
   con = PGconn.connect("localhost",5432,nil,nil,"resource53","postgres")
