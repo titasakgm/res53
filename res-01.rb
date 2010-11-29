@@ -118,6 +118,10 @@ li {
   width: 100%;
   float:left;
 }
+#res_link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .ipx60 {
   width:60px;
 }
@@ -320,6 +324,11 @@ function processReq()
       </div> <!-- eo s4 div -->
     </center>
     </div> <!-- eo res_admin div -->
+
+    <div id='res_links'>
+      <a href='http://moc.moph.go.th'><img src='images/mocs.jpg' width='100%' margin-bottom='5px'/></a>
+      <a href='http://www.thcc.or.th'><img src='images/thccs.jpg' width='100%'/></a>
+    </div>
 
     <div id='res_calendar'>
     <center>
