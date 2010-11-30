@@ -403,16 +403,8 @@ function processReq()
       <li><a href='res-rep2550.html'>สรุปรายงานข้อมูลปี 2550</a>
       <li><a href='/res49/hr_report49.rb'>สรุปรายงานข้อมูลปี 2549</a>
       <li><a href='/res48/hr_report48.rb'>สรุปรายงานข้อมูลปี 2548</a>
-      <!--
-      <li><a href='http://neo.moph.go.th/ftppis/rpt_menu.php'>สรุปรายงานข้อมูลบุคลากรส่วนภูมิภาคและระดับปฐมภูมิ 
-          สังกัดสำนักงานปลัดกระทรวงสาธารณสุขปี 2551</a>
-      //-->
-      <li><a href='/res53/undercon.html'>สรุปรายงานข้อมูลบุคลากรส่วนภูมิภาคและระดับปฐมภูมิ 
-          สังกัดสำนักงานปลัดกระทรวงสาธารณสุขปี 2551</a>
       <li><a href='ftp://203.157.240.7/pub/resource52/usermanual.doc'>
           Download  หนังสือคู่มือการใช้งานโปรแกรมระบบรายงานทรัพยากรสาธารณสุข   เริ่มปีงบประมาณ 2551 ถึงปีปัจจุบัน       </a>
-      <li><a href='ftp://203.157.240.7/pub/resource53/2009-08-20-NakonNayok'>Download
-     PowerPoint บรรยายในการประชุมที่นครนายก</a>
       <li><a href='ftp://203.157.240.7/pub/resource52/2009-12-03-form1-update/Postion-Definition-V-10.pdf'>Download
           หนังสือเวียนที่ นร 1008/ ว 10  เรื่องมาตรฐานกำหนดตำแหน่ง</a>
       <li><a href='ftp://203.157.240.7/pub/resource53/survey53.zip'>Download 
