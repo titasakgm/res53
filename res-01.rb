@@ -328,6 +328,7 @@ function processReq()
     <div id='res_links'>
       <a href='http://moc.moph.go.th'><img src='images/mocs.jpg' width='100%' margin-bottom='5px'/></a>
       <a href='http://www.thcc.or.th'><img src='images/thccs.jpg' width='100%'/></a>
+      <a href='http://mrd-hss.moph.go.th/home/'><img src='images/mrds.jpg' width='100%'/></a>
     </div>
 
     <div id='res_calendar'>

@@ -4469,7 +4469,7 @@ end
 
 def getReporter(user)
   pcode = user[0..1]
-  acode = user[2..3]
+  acode = user[2..3] || '00'
   con = PGconn.connect("localhost",5432,nil,nil,"resource53")
   sql = "SELECT reporter FROM report2 "
   sql += "WHERE provid='#{pcode}' AND ampid='#{acode}'"

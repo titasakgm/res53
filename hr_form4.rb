@@ -74,7 +74,7 @@ repName = getOfficeName(repId)
 
 reporter_id = offId
 reporter_id = "#{offId}01" if offId.length == 2
-reporter_id = "#{offId}00" if offId == '10'
+reporter_id = "#{offId}00" if (offId == '10' || offId == '98')
 reporter = getReporter(reporter_id)
 
 if opt.to_s == 'DEL'

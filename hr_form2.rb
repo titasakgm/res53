@@ -47,6 +47,7 @@ moph = nil
 reporter_id = offId
 reporter_id = "#{offId}01" if offId.length == 2
 reporter_id = "#{offId}00" if offId == '10'
+reporter_id = '9800' if offId == '98'
 reporter = getReporter(reporter_id)
 
 f2allow = checkForm2Allow(repId)
