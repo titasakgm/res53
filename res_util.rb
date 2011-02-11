@@ -2800,7 +2800,7 @@ def f15footer(year)
   if (year < '52')
     h += "<a href='ftp://203.157.240.9/pub/resource51/prof-51.txt'>"
   else
-    h += "<a href='ftp://203.157.240.9/pub/resource53/prof-52.txt'>"
+    h += "<a href='ftp://203.157.240.9/pub/resource52/prof-52.txt'>"
   end
   h += "<input type='button' value='Download รหัสวิชาชีพ' "
   h += "onclick=\"document.location.href='ftp://203.157.240.9/pub/resource53/prof-52.txt'\" /></a>\n"
